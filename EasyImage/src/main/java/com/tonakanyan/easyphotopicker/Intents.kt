@@ -31,7 +31,7 @@ internal object Intents {
 
     internal fun createDocumentsIntent(): Intent {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
-        intent.type = "image/*"
+        intent.type = "application/*|text/*"
         return intent
     }
 
