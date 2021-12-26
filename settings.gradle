@@ -1,3 +1,17 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://maven.pkg.github.com/NTonakanyan/Android-Date-Range-Select-on-Calendar-Library")
+//            credentials {
+//                username = System.getenv("USER")
+//                password = System.getenv("PERSONAL_ACCESS_TOKEN")
+//            }
+        }
+    }
+}
 include ':EasyImage'
 include ':app'
 rootProject.name = "Android-Easy_code-library"
