@@ -96,10 +96,6 @@ internal object Intents {
     }
 
     internal fun isTherePhotoTakenWithCameraInsideIntent(dataIntent: Intent): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            dataIntent.data == null && dataIntent.clipData == null
-        } else {
-            dataIntent.data == null
-        }
+        return dataIntent.data == null && dataIntent.clipData == null
     }
 }
