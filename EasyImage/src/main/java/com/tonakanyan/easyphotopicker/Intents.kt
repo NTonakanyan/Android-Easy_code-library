@@ -68,7 +68,7 @@ internal object Intents {
     @Throws(IOException::class)
     internal fun createChooserIntent(context: Context, chooserTitle: String, chooserType: ChooserType, cameraFileUri: Uri, allowMultiple: Boolean): Intent {
         val cameraIntents = ArrayList<Intent>()
-        val captureIntent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
+        val captureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         val packageManager = context.packageManager
         val camList = packageManager.queryIntentActivities(captureIntent, 0)
         for (resolveInfo in camList) {
